@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "datetime": {
+      "type": "datetime",
+      "required": true
+    },
+    "venue": {
+      "type": "string",
+      "required": true
+    },
+    "event_type": {
+      "type": "enumeration",
+      "enum": [
+        "educational",
+        "conference",
+        "talk",
+        "entertainment",
+        "meetup",
+        "other"
+      ],
+      "default": "educational"
+    },
+    "paid": {
+      "type": "boolean"
+    },
+    "event_host": {
+      "type": "string",
+      "required": true
+    },
+    "banner_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "available_seats": {
+      "type": "integer",
+      "default": 20,
+      "required": true
+    }
+  }
+}

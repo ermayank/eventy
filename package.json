@@ -1,0 +1,16 @@
+{
+  "name": "poc_events",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run develop\" \"cd frontend && npm run start\"",
+    "start": "cd backend && npm run develop && cd .. && cd frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayank Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
