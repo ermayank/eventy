@@ -22,9 +22,12 @@ const Header = () => {
               Contact Us
             </Link>
           </nav>
-          <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+          <Link
+            to="/login"
+            className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+          >
             Login/Register
-          </button>
+          </Link>
         </div>
       </header>
     </>

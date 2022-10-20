@@ -6,6 +6,7 @@ import EventsView from "./views/EventsView";
 import EventView from "./views/EventView";
 import Footer from "./components/Footer";
 import Contact from "./views/Contact";
+import Login from "./views/Login";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/events" element={<EventsView></EventsView>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
           <Route path="/events/:id" element={<EventView></EventView>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
         </Routes>
         <Footer></Footer>
       </Router>
