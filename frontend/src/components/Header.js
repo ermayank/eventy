@@ -16,7 +16,7 @@ const Header = () => {
               All Events
             </Link>
             <Link className="mr-5 hover:text-white" to="/events">
-              Upcoming Events
+              Events by Category
             </Link>
             <Link className="mr-5 hover:text-white" to="/contact">
               Contact Us
