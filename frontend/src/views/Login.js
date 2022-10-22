@@ -17,7 +17,7 @@ const Login = () => {
 
     var config = {
       method: "post",
-      url: "http://localhost:1337/auth/local",
+      url: `${process.env.REACT_APP_SERVER_URL}/auth/local`,
       headers: {
         "Content-Type": "application/json",
       },

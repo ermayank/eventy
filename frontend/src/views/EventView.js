@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const EventView = () => {
@@ -11,10 +10,13 @@ const EventView = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:1337/events/${id}`);
+      const response = await fetch(
+        `${process.env.REACT_APP_SERVER_URL}/events/${id}`
+      );
       const newData = await response.json();
       setEvent(newData);
-      const banner = "http://localhost:1337" + newData.banner_image.url;
+      const banner =
+        process.env.REACT_APP_SERVER_URL + newData.banner_image.url;
       setBannerImage(banner);
     };
 

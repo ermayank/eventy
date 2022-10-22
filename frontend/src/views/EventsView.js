@@ -6,14 +6,10 @@ const EventsView = () => {
   const [events, setEvents] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:1337/events").then((res) => {
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/events`).then((res) => {
       setEvents(res.data);
     });
   }, []);
-
-  const formatDate = (dateTime) => {
-    return new Date(dateTime);
-  };
 
   return (
     <section className="text-gray-600 body-font">
@@ -46,7 +42,7 @@ const EventsView = () => {
                         Date Time - {event.datetime}
                       </p>
                       <Link to={`/events/${event._id}`}>
-                        <a className="text-red-500 inline-flex items-center">
+                        <span className="text-red-500 inline-flex items-center">
                           Know More
                           <svg
                             className="w-4 h-4 ml-2"
@@ -60,7 +56,7 @@ const EventsView = () => {
                             <path d="M5 12h14"></path>
                             <path d="M12 5l7 7-7 7"></path>
                           </svg>
-                        </a>
+                        </span>
                       </Link>
                       <div className="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
                         <span className="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
