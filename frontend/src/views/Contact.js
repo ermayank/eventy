@@ -7,10 +7,10 @@ const Contact = () => {
       <section className="text-gray-600 body-font relative">
         <div className="flex flex-col text-center w-full mb-5 mt-20">
           <h2 className="text-xs text-red-500 tracking-widest font-medium title-font mb-1">
-            ROOF PARTY POLAROID
+            CONTACT US
           </h2>
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-            Master Cleanse Reliac Heirloom
+            Eventy - Canada
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
@@ -30,7 +30,7 @@ const Contact = () => {
               marginHeight="0"
               marginWidth="0"
               scrolling="no"
-              src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22374.24766712323!2d-73.64297512089841!3d45.494355500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a6a636dd639%3A0x9e85cac6415827f0!2sConcordia%20University!5e0!3m2!1sen!2sca!4v1666632868522!5m2!1sen!2sca"
               style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
             ></Iframe>
             <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
