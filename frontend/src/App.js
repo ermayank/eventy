@@ -7,6 +7,7 @@ import EventView from "./views/EventView";
 import Footer from "./components/Footer";
 import Contact from "./views/Contact";
 import Login from "./views/Login";
+import Register from "./views/Register";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact></Contact>}></Route>
           <Route path="/events/:id" element={<EventView></EventView>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/register" element={<Register></Register>}></Route>
         </Routes>
         <Footer></Footer>
       </Router>

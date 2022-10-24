@@ -59,10 +59,8 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "student_id": {
-      "type": "string",
-      "required": true,
-      "unique": true
+    "name": {
+      "type": "string"
     }
   }
 }

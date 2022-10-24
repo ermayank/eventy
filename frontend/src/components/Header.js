@@ -1,14 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 /* eslint-disable */
 const Header = () => {
+  const navigate = useNavigate();
+  const [buttonText, setButtonText] = useState("");
+
+  useEffect(() => {
+    if (!localStorage.getItem("authenticated")) {
+      setButtonText("Sign In");
+    } else {
+      setButtonText("Logout");
+    }
+  }, [localStorage.getItem("authenticated")]);
+
+  const logoutHandler = (e) => {
+    if (localStorage.getItem("authenticated")) {
+      localStorage.removeItem("authenticated");
+      localStorage.removeItem("jwt");
+      setButtonText("Sign In");
+    } else {
+      navigate("/login");
+    }
+  };
   return (
     <>
       <header className="text-gray-400 bg-gray-900 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <span className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
             <span className="ml-3 text-xl">
-              <Link to="/">Concordia Events</Link>
+              <Link to="/">Eventy</Link>
             </span>
           </span>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
@@ -22,12 +42,12 @@ const Header = () => {
               Contact Us
             </Link>
           </nav>
-          <Link
-            to="/login"
-            className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+          <span
+            className="inline-flex items-center cursor-pointer bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+            onClick={logoutHandler}
           >
-            Login/Register
-          </Link>
+            {buttonText}
+          </span>
         </div>
       </header>
     </>
