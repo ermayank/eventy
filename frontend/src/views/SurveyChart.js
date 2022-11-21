@@ -11,13 +11,13 @@ const SurveyChart = () => {
   const [pie2, setPie2] = useState({});
   const [bar1, setBar1] = useState({});
   let aggregatedData = [];
+  let mayank = {};
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
         `${process.env.REACT_APP_SERVER_URL}/events/${id}`
       );
       const newData = await response.json();
-      setEvent(newData);
       {
         const countedData = countBy(newData.survey[6], Math.floor);
         const countedDataKeys = Object.keys(countedData); //string
@@ -87,17 +87,8 @@ const SurveyChart = () => {
         bar1Data.push(arr);
         arr = [];
       }
-      setBar1({
-        labels: [
-          "How satisfied were you with the event?",
-          "How well the the event meet your expectations?",
-          "How Was this event interactive ?",
-          "How likely you would recommend this event in the future to someone?",
-          "What was your overall experience of the event",
-          "How helpful was the staff at the event?",
-        ],
-        datasets: bar1Data,
-      });
+
+      setBar1((current) => [...bar1Data]);
     };
 
     fetchData();
@@ -153,43 +144,43 @@ const SurveyChart = () => {
     },
   };
 
-  // const mayank = {
-  //   labels: [
-  //     "How satisfied were you with the event?",
-  //     "How well the the event meet your expectations?",
-  //     "How Was this event interactive ?",
-  //     "How likely you would recommend this event in the future to someone?",
-  //     "What was your overall experience of the event",
-  //     "How helpful was the staff at the event?",
-  //   ],
-  //   datasets: [
-  //     {
-  //       label: "Poor",
-  //       data: bar1.datasets[0],
-  //       backgroundColor: "#b82e2e",
-  //     },
-  //     {
-  //       label: "Fair",
-  //       data: bar1.datasets[1],
-  //       backgroundColor: "#994499",
-  //     },
-  //     {
-  //       label: "Neutral",
-  //       data: bar1.datasets[2],
-  //       backgroundColor: "#316395",
-  //     },
-  //     {
-  //       label: "V. Good",
-  //       data: bar1.datasets[3],
-  //       backgroundColor: "#22aa99 ",
-  //     },
-  //     {
-  //       label: "Excellent",
-  //       data: bar1.datasets[4],
-  //       backgroundColor: "#66aa00",
-  //     },
-  //   ],
-  // };
+  const dataBar1 = {
+    labels: [
+      "How satisfied were you with the event?",
+      "How well the the event meet your expectations?",
+      "How Was this event interactive ?",
+      "How likely you would recommend this event in the future to someone?",
+      "What was your overall experience of the event",
+      "How helpful was the staff at the event?",
+    ],
+    datasets: [
+      {
+        label: "Poor",
+        data: bar1[0],
+        backgroundColor: "#b82e2e",
+      },
+      {
+        label: "Fair",
+        data: bar1[1],
+        backgroundColor: "#994499",
+      },
+      {
+        label: "Neutral",
+        data: bar1[2],
+        backgroundColor: "#316395",
+      },
+      {
+        label: "V. Good",
+        data: bar1[3],
+        backgroundColor: "#22aa99 ",
+      },
+      {
+        label: "Excellent",
+        data: bar1[4],
+        backgroundColor: "#66aa00",
+      },
+    ],
+  };
 
   return (
     <>
@@ -208,12 +199,12 @@ const SurveyChart = () => {
           </div>
         </div>
       </div>
-      {/* <div className="my-2 mx-2 border-2 flex items-center flex-col">
+      <div className="my-2 mx-2 border-2 flex items-center flex-col">
         <h1>Will attend Again</h1>
         <div className="text-center" style={{ width: 1200 }}>
-          <BarChart chartData={mayank} options={barOptions} />
+          <BarChart chartData={dataBar1} options={barOptions} />
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
