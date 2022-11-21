@@ -61,6 +61,10 @@
     },
     "name": {
       "type": "string"
+    },
+    "events": {
+      "via": "participants",
+      "collection": "event"
     }
   }
 }

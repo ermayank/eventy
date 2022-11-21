@@ -38,6 +38,11 @@ const Login = () => {
         setPassword("");
         localStorage.setItem("authenticated", true);
         localStorage.setItem("jwt", response.data.jwt);
+        if (response.data.user.email == "admin@example.com") {
+          localStorage.setItem("isAdmin", true);
+        } else {
+          localStorage.setItem("isAdmin", false);
+        }
         navigate("/events");
       })
       .catch(function (error) {

@@ -17,11 +17,24 @@ const Header = () => {
     if (localStorage.getItem("authenticated")) {
       localStorage.removeItem("authenticated");
       localStorage.removeItem("jwt");
+      localStorage.removeItem("isAdmin");
       setButtonText("Sign In");
     } else {
       navigate("/login");
     }
   };
+
+  const isAdmin = () => {
+    if (
+      localStorage.getItem("isAdmin") == "true" &&
+      localStorage.getItem("authenticated") == "true"
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   return (
     <>
       <header className="text-gray-400 bg-gray-900 body-font">
@@ -35,9 +48,14 @@ const Header = () => {
             <Link className="mr-5 hover:text-white" to="/events">
               All Events
             </Link>
-            <Link className="mr-5 hover:text-white" to="/events">
-              Events by Category
-            </Link>
+            {isAdmin() ? (
+              <Link className="mr-5 hover:text-white" to="/eventssurvey">
+                Survey Details
+              </Link>
+            ) : (
+              <span></span>
+            )}
+
             <Link className="mr-5 hover:text-white" to="/contact">
               Contact Us
             </Link>
