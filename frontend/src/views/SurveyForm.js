@@ -142,7 +142,7 @@ const SurveyForm = () => {
                     How satisfied were you with the event?
                   </h2>
                   <label className="leading-7 text-sm text-gray-600">
-                    1 being the least and 10 being the most
+                    1 being the least and 5 being the most
                   </label>
                   <div className="leading-relaxed relative flex justify-around w-full ">
                     {/* r1 */}
@@ -154,7 +154,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        1
+                        Poor
                       </label>
                     </div>
                     {/* r2 */}
@@ -166,7 +166,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        2
+                        Fair
                       </label>
                     </div>
                     {/* r3 */}
@@ -178,7 +178,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        3
+                        Neutral
                       </label>
                     </div>
                     {/* r4 */}
@@ -190,7 +190,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        4
+                        V. good
                       </label>
                     </div>
                     {/* r5 */}
@@ -202,7 +202,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        5
+                        Excellent
                       </label>
                     </div>
                   </div>
@@ -226,7 +226,7 @@ const SurveyForm = () => {
                     How well the the event meet your expectations?
                   </h2>
                   <label className="leading-7 text-sm text-gray-600">
-                    1 being the least and 10 being the most
+                    1 being the least and 5 being the most
                   </label>
                   <div className="leading-relaxed relative flex justify-around w-full ">
                     {/* r1 */}
@@ -238,7 +238,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        1
+                        Poor
                       </label>
                     </div>
                     {/* r2 */}
@@ -250,7 +250,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        2
+                        Fair
                       </label>
                     </div>
                     {/* r3 */}
@@ -262,7 +262,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        3
+                        Neutral
                       </label>
                     </div>
                     {/* r4 */}
@@ -274,7 +274,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        4
+                        V. good
                       </label>
                     </div>
                     {/* r5 */}
@@ -286,7 +286,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        5
+                        Excellent
                       </label>
                     </div>
                   </div>
@@ -310,7 +310,7 @@ const SurveyForm = () => {
                     How Was this event interactive ?
                   </h2>
                   <label className="leading-7 text-sm text-gray-600">
-                    1 being the least and 10 being the most
+                    1 being the least and 5 being the most
                   </label>
                   <div className="leading-relaxed relative flex justify-around w-full ">
                     {/* r1 */}
@@ -322,7 +322,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        1
+                        Poor
                       </label>
                     </div>
                     {/* r2 */}
@@ -334,7 +334,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        2
+                        Fair
                       </label>
                     </div>
                     {/* r3 */}
@@ -346,7 +346,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        3
+                        Neutral
                       </label>
                     </div>
                     {/* r4 */}
@@ -358,7 +358,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        4
+                        V. good
                       </label>
                     </div>
                     {/* r5 */}
@@ -370,7 +370,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        5
+                        Excellent
                       </label>
                     </div>
                   </div>
@@ -395,7 +395,7 @@ const SurveyForm = () => {
                     someone?
                   </h2>
                   <label className="leading-7 text-sm text-gray-600">
-                    1 being the least and 10 being the most
+                    1 being the least and 5 being the most
                   </label>
                   <div className="leading-relaxed relative flex justify-around w-full ">
                     {/* r1 */}
@@ -407,7 +407,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        1
+                        Poor
                       </label>
                     </div>
                     {/* r2 */}
@@ -419,7 +419,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        2
+                        Fair
                       </label>
                     </div>
                     {/* r3 */}
@@ -431,7 +431,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        3
+                        Neutral
                       </label>
                     </div>
                     {/* r4 */}
@@ -443,7 +443,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        4
+                        V. good
                       </label>
                     </div>
                     {/* r5 */}
@@ -455,7 +455,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        5
+                        Excellent
                       </label>
                     </div>
                   </div>
@@ -491,7 +491,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        1
+                        Poor
                       </label>
                     </div>
                     {/* r2 */}
@@ -503,7 +503,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        2
+                        Fair
                       </label>
                     </div>
                     {/* r3 */}
@@ -515,7 +515,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        3
+                        Neutral
                       </label>
                     </div>
                     {/* r4 */}
@@ -527,7 +527,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        4
+                        V. good
                       </label>
                     </div>
                     {/* r5 */}
@@ -539,7 +539,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        5
+                        Excellent
                       </label>
                     </div>
                   </div>
@@ -575,7 +575,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        1
+                        Poor
                       </label>
                     </div>
                     {/* r2 */}
@@ -587,7 +587,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        2
+                        Fair
                       </label>
                     </div>
                     {/* r3 */}
@@ -599,7 +599,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        3
+                        Neutral
                       </label>
                     </div>
                     {/* r4 */}
@@ -611,7 +611,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        4
+                        V. good
                       </label>
                     </div>
                     {/* r5 */}
@@ -623,7 +623,7 @@ const SurveyForm = () => {
                         className="w-4 h-4"
                       />
                       <label className="ml-2 text-sm font-medium text-black dark:text-black">
-                        5
+                        Excellent
                       </label>
                     </div>
                   </div>
