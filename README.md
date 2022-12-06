@@ -1,53 +1,129 @@
-# Project Title
 
-Eventy - Event Management and Survey System
+# Eventy - Event Management and Survey System
 
-## Authors
 
-| Name           | Student ID | Github Username                                      |
-| -------------- | ---------- | ---------------------------------------------------- |
-| Mayank Gupta   | 40198760   | [@ermayank](https://www.github.com/ermayank)         |
-| Kousar Attar   | 40170941   | [@attarkousar](https://www.github.com/attarkousar)   |
-| Neha Chaudhary | 40198530   | [@neha2499](https://www.github.com/neha2499)         |
-| Sharul Dhiman  | 40195730   | [@sharuldhiman](https://www.github.com/sharuldhiman) |
+## About
 
-## Description
+Eventy is the web application tool for organizing the successful event. Managing the event is the arduous responsibility irrespective of the event type. Along with that it is crucial to gather important feedback from the attendee to analyze the principal elements for future references. Event feeds enhance audience engagement and make the event a trend. This can be accomplished by putting event management systems into practice that can tackle complexities with ease. Our overall goal is to create an event management and survey system that makes things easy for organizers as well attendees. This will make sure that the users have the appropriate level of knowledge and details about your objectives of the event. It will eventually help to eliminate the chances of missing any important events and provide easy accessibility of event information.
 
-Event management system is the essential element or tool for organizing successful events. Especially in a country like Canada where people from different ethnicities have different inclinations and preferences. This ethnic integration results in rapid increase in trend for events. Managing the event in the arduous responsibility irrespective of the event type whether it is a conference, an online seminar, a concert, a dance, a career counseling etc. There are individuals that need to be invited for the event, along with that it is important to select the proper venue. Further, it should be promoted well so that more people attend the event. All these attributes come under the good planning that make an event a successful event. Along with that it is crucial to gather important feedback from the attendee to analyze the principal elements for future references. Event feeds enhance audience engagement and make the event a trend. This can be accomplished by putting event management systems into practice that can tackle complexities with ease
+#### Key features of Eventy
 
-- Users should sign up or login.
-- Users should be able to browse all events.
-- Users should be able to search for desired events.
-- Users should be able to select and view events.
-- Users should be able to rate the event.
+- it is a chaotic event management and survey system for event organizers. For that purpose the admin can supervise the participant, events and Survey analysis.
+- Easy accessibility of event information for attendees so that they can register for the event of their choice effortlessly.
+- Collecting qualitative data in the form of feedback from the attendee for a post event survey.
+- Eliminates the chances of missing any major events.
+- Attracting the volume of people for the event.
+- It provide effective for the admin to analyze the event after its completion which is otherwise a strenuous and time consuming job.
 
-### Getting Started
+## Built With
 
-In this project we have implemented web application for event management system. For this we have mainly used Javascript and for templated we have used HTML/CSS.
-We are using M.E.R.N. stack for the project which is abbreviated as MongoDB, ExpressJS, ReactJS, NodeJS.
+- M.E.R.N stack
+- Amazon AWS
+- Docker
+- Github Actions
+
+## Getting Started
+
+### Prerequisites
+
+In order to run this web application the docker need to be installed in the system.
+
+##### Docker Pull Command
+   - Front End 
+        ```bash
+        docker pull mguptaca/poc_frontend
+        ```
+
+  - Back End
+     ```bash
+    docker pull mguptaca/poc_backend
+    ```
 
 ### Dependencies
 
 - All the dependencis are mentioned in the respective package.json file.
 
 ```bash
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "@paypal/react-paypal-js": "^7.8.1",
+    "@testing-library/jest-dom": "^5.16.5",
     "axios": "^1.1.2",
+    "chart.js": "^3.9.1",
     "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
     "react-dom": "^18.2.0",
     "react-iframe": "^1.8.4",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "concurrently": "^7.4.0"
+    "engines": {
+        "node": ">=10.16.0 <=14.x.x",
+        "npm": "^6.0.0"
+  },
 ```
 
-### Installing
 
-- Clone the repository
-- Add specific environment variables for mondoDB
-- Install All dependencies
-- Run script start and the backend and frontend will be starting on different ports.
+## Event Data Model
 
-## Screenshots
+```bash
+  {
+  "_id": ObjectId,
+  "event_type": String,
+  "available_seats": Integer,
+  "cost": Double,
+  "paymentDone": Boolean,
+  "participants": Array
+  "paid": Boolean,
+  "event_host": String,
+  "venue": String,
+  "paymentData": Object,
+  "title": String,
+  "survey":Array,
+  "datetime": Timestamp,
+  "description": String
+  "published_at": Timestamp,
+  "createdAt": Timestamp,
+  "updatedAt":Timestamp,m
+  "__v": Double,
+  "banner_image":ObjectId,
+  "created_by": {
+    "$oid": ObjectId
+  }
+  "updated_by":  {
+    "$oid": ObjectId
+  }
+}
+```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+## API Reference
+
+
+#### Get Event Detail by ID
+
+```http
+  GET /event:id
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `string` | **Required**. Event ID |
+
+
+#### Other REST API to the Eventy app is described below.
+
+- ```http
+  GET /survey:id
+    ```
+- ```http
+  GET /surveychart:id
+    ```
+
+## Authors
+
+
+| Name           | Student ID | Github Username                                      |
+| -------------- | ---------- | ---------------------------------------------------- |
+| Mayank Gupta   | 40198760   | [@ermayank](https://www.github.com/ermayank)         |
+| Kousar Attar   | 40170941   | [@attarkousar](https://www.github.com/attarkousar)   |
+| Neha Chaudhary | 40198535   | [@neha2499](https://www.github.com/neha2499)         |
+| Sharul Dhiman  | 40195730   | [@sharuldhiman](https://www.github.com/sharuldhiman) |
