@@ -39,29 +39,6 @@ In order to run this web application the docker need to be installed in the syst
     docker pull mguptaca/poc_backend
     ```
 
-### Dependencies
-
-- All the dependencis are mentioned in the respective package.json file.
-
-```bash
-    "@paypal/checkout-server-sdk": "^1.0.3",
-    "@paypal/react-paypal-js": "^7.8.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "axios": "^1.1.2",
-    "chart.js": "^3.9.1",
-    "react": "^18.2.0",
-    "react-chartjs-2": "^4.3.1",
-    "react-dom": "^18.2.0",
-    "react-iframe": "^1.8.4",
-    "react-router-dom": "^6.4.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "engines": {
-        "node": ">=10.16.0 <=14.x.x",
-        "npm": "^6.0.0"
-  },
-```
-
 
 ## Event Data Model
 
@@ -94,36 +71,3 @@ In order to run this web application the docker need to be installed in the syst
   }
 }
 ```
-
-## API Reference
-
-
-#### Get Event Detail by ID
-
-```http
-  GET /event:id
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `id` | `string` | **Required**. Event ID |
-
-
-#### Other REST API to the Eventy app is described below.
-
-- ```http
-  GET /survey:id
-    ```
-- ```http
-  GET /surveychart:id
-    ```
-
-## Authors
-
-
-| Name           | Student ID | Github Username                                      |
-| -------------- | ---------- | ---------------------------------------------------- |
-| Mayank Gupta   | 40198760   | [@ermayank](https://www.github.com/ermayank)         |
-| Kousar Attar   | 40170941   | [@attarkousar](https://www.github.com/attarkousar)   |
-| Neha Chaudhary | 40198535   | [@neha2499](https://www.github.com/neha2499)         |
-| Sharul Dhiman  | 40195730   | [@sharuldhiman](https://www.github.com/sharuldhiman) |
