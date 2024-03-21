@@ -1,73 +1,40 @@
+# Eventy
 
-# Eventy - Event Management and Survey System
+Eventy is a web application designed to simplify event management for organizers and streamline event discovery for attendees. Whether you're planning a conference, workshop, or meetup, Eventy provides the tools you need to create, manage, and promote your events effortlessly.
 
+## Key Features
 
-## About
+- **Event Creation:** Easily create new events with detailed information including title, description, date, time, location, and more.
+- **Attendee Registration:** Allow attendees to register for events online, managing RSVPs and keeping track of attendee details.
+- **Ticketing System:** Implement ticketing functionality for paid events, enabling secure online ticket purchases.
+- **Event Management:** Comprehensive dashboard for event organizers to manage event details, attendee lists, and ticket sales.
+- **Event Discovery:** Browse and search for upcoming events based on criteria such as date, location, category, and keyword.
+- **Social Sharing:** Integration with social media platforms for easy event sharing and promotion.
 
-Eventy is the web application tool for organizing the successful event. Managing the event is the arduous responsibility irrespective of the event type. Along with that it is crucial to gather important feedback from the attendee to analyze the principal elements for future references. Event feeds enhance audience engagement and make the event a trend. This can be accomplished by putting event management systems into practice that can tackle complexities with ease. Our overall goal is to create an event management and survey system that makes things easy for organizers as well attendees. This will make sure that the users have the appropriate level of knowledge and details about your objectives of the event. It will eventually help to eliminate the chances of missing any important events and provide easy accessibility of event information.
+## Technologies Used
 
-#### Key features of Eventy
-
-- it is a chaotic event management and survey system for event organizers. For that purpose the admin can supervise the participant, events and Survey analysis.
-- Easy accessibility of event information for attendees so that they can register for the event of their choice effortlessly.
-- Collecting qualitative data in the form of feedback from the attendee for a post event survey.
-- Eliminates the chances of missing any major events.
-- Attracting the volume of people for the event.
-- It provide effective for the admin to analyze the event after its completion which is otherwise a strenuous and time consuming job.
-
-## Built With
-
-- M.E.R.N stack
-- Amazon AWS
-- Docker
-- Github Actions
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** Passport.js
+- **Payment Integration:** Paypal API
 
 ## Getting Started
 
-### Prerequisites
+To run this project locally, follow these steps:
 
-In order to run this web application the docker need to be installed in the system.
+1. Clone the repository: `git clone https://github.com/ermayank/eventy.git`
+2. Install dependencies: `npm install`
+3. Set up environment variables for MongoDB connection, Stripe API keys, and session secret.
+4. Run the server: `npm start`
+5. Open `http://localhost:3000` in your web browser.
 
-##### Docker Pull Command
-   - Front End 
-        ```bash
-        docker pull mguptaca/poc_frontend
-        ```
+For detailed installation and usage instructions, refer to the [Documentation](https://github.com/ermayank/eventy/blob/main/README.md).
 
-  - Back End
-     ```bash
-    docker pull mguptaca/poc_backend
-    ```
+## Contributing
 
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
-## Event Data Model
+## License
 
-```bash
-  {
-  "_id": ObjectId,
-  "event_type": String,
-  "available_seats": Integer,
-  "cost": Double,
-  "paymentDone": Boolean,
-  "participants": Array
-  "paid": Boolean,
-  "event_host": String,
-  "venue": String,
-  "paymentData": Object,
-  "title": String,
-  "survey":Array,
-  "datetime": Timestamp,
-  "description": String
-  "published_at": Timestamp,
-  "createdAt": Timestamp,
-  "updatedAt":Timestamp,m
-  "__v": Double,
-  "banner_image":ObjectId,
-  "created_by": {
-    "$oid": ObjectId
-  }
-  "updated_by":  {
-    "$oid": ObjectId
-  }
-}
-```
+This project is licensed under the [MIT License](https://github.com/ermayank/eventy/blob/main/LICENSE).
